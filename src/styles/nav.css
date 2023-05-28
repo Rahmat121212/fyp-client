@@ -10,3 +10,4 @@
 .nav-circle {
    @apply flex items-center justify-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute -top-2 -right-3;
 }
+
