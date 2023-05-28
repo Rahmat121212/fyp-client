@@ -26,6 +26,7 @@ const Nav = () => {
                   onClick={() => dispatch(toggleSearchBar())}
                 />
               </li>
+             
               {userToken ? (
                 <li className="nav-li">
                   <Link to="/user" className="nav-link">

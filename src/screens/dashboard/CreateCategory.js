@@ -15,9 +15,9 @@ const CreateCategory = () => {
         setState({...state, [e.target.name]: e.target.files[0]});
     }
 }
-const handleInput = e => {
-    setState({...state, [e.target.name]: e.target.value})
-}
+const handleInput = (e) => {
+  setState({ ...state, [e.target.name]: e.target.value });
+};
   const [saveCategory, data] = useCreateMutation();
   console.log(data);
   const errors = data?.error?.data?.errors ? data?.error?.data?.errors : [];
@@ -26,6 +26,7 @@ const handleInput = e => {
     const formData = new FormData();
     formData.append('data', JSON.stringify(state));
     formData.append('image', state.image)
+    
     saveCategory(formData);
   };
   const navigate = useNavigate();
@@ -54,10 +55,10 @@ const handleInput = e => {
         <div className="mb-3">
           <input
             type="text"
-            name=""
+            name="name"
             className="form-control"
             placeholder="Category Name..."
-            value={state}
+            value={state.name}
             onChange={handleInput}
           />
         </div>
