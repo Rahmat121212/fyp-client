@@ -36,6 +36,12 @@ const Sidebar = ({ side, closeSidebar }) => {
             categories
           </Link>
         </li>
+        <li className="px-4 cursor-pointer transition-all py-3 text-white flex items-center hover:bg-gray-600">
+          <i className="bi bi-bar-chart mr-2 inline-block text-lg"></i>{" "}
+          <Link to="/dashboard/flex" className="text-base capitalize">
+            Flex
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -22,6 +22,8 @@ import Orders from "../screens/dashboard/Orders";
 import OrderDetails from "../screens/dashboard/OrderDetails";
 import UserOrders from "../screens/users/UserOrders";
 import UserOrderDetails from "../screens/users/UserOrderDetails";
+import Flex from "../screens/dashboard/Flex";
+import CreateFlex from "../screens/dashboard/CreateFlex";
 const Routing = () => {
   return (
     <BrowserRouter>
@@ -56,6 +58,23 @@ const Routing = () => {
           />
         </Route>
         <Route path="dashboard">
+          
+          <Route
+            path="flex"
+            element={
+              <Private>
+                <Flex />
+              </Private>
+            }
+          />
+          <Route
+            path="create-flex"
+            element={
+              <Private>
+                <CreateFlex />
+              </Private>
+            }
+          />
           <Route
             path="products"
             element={
